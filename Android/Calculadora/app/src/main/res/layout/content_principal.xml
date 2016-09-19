@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="br.com.smartsource.www.calculadora.principal"
+    tools:showIn="@layout/activity_principal"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="308dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Calculadora Pessoal"
+        android:id="@+id/textEntrada"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#db7312"
+        android:textIsSelectable="false"
+        android:textSize="30dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textVisor"
+        android:textIsSelectable="true"
+        android:textAlignment="viewEnd"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="end"
+        android:background="#aba5a5"
+        android:editable="false"
+        android:elegantTextHeight="false"
+        android:inputType="none" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/linha1"
+        android:weightSum="1"
+        android:gravity="center">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="1"
+            android:id="@+id/btn1"
+            android:onClick="func" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="2"
+            android:id="@+id/btn2"
+            android:onClick="func" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="3"
+            android:id="@+id/btn3"
+            android:onClick="func" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="CE"
+            android:id="@+id/btnce"
+            android:onClick="funcCE" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/linha2"
+        android:weightSum="1"
+        android:gravity="center" >
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="4"
+            android:id="@+id/btn4"
+            android:onClick="func" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="5"
+            android:id="@+id/btn5"
+            android:onClick="func" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="6"
+            android:id="@+id/btn6"
+            android:onClick="func" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="+"
+            android:id="@+id/btnadd"
+            android:onClick="func" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/linha3"
+        android:weightSum="1"
+        android:gravity="center" >
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="7"
+            android:id="@+id/btn7"
+            android:onClick="func7" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="8"
+            android:id="@+id/btn8"
+            android:onClick="func8" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="9"
+            android:id="@+id/btn9"
+            android:onClick="func9" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="-"
+            android:id="@+id/btnsub"
+            android:onClick="func" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/linha4"
+        android:weightSum="1"
+        android:gravity="center" >
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="0"
+            android:id="@+id/btn0"
+            android:onClick="func" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="*"
+            android:id="@+id/btnmulti"
+            android:onClick="func" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="/"
+            android:id="@+id/btndiv"
+            android:onClick="func" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="="
+            android:id="@+id/btnigual"
+            android:onClick="funcIgual" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"></LinearLayout>
+</LinearLayout>
