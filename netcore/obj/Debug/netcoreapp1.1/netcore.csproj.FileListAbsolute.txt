@@ -1,0 +1,8 @@
+/home/emersonrodrigues/Documentos/treinamento.git/netcore/bin/Debug/netcoreapp1.1/netcore.deps.json
+/home/emersonrodrigues/Documentos/treinamento.git/netcore/bin/Debug/netcoreapp1.1/netcore.runtimeconfig.json
+/home/emersonrodrigues/Documentos/treinamento.git/netcore/bin/Debug/netcoreapp1.1/netcore.runtimeconfig.dev.json
+/home/emersonrodrigues/Documentos/treinamento.git/netcore/bin/Debug/netcoreapp1.1/netcore.dll
+/home/emersonrodrigues/Documentos/treinamento.git/netcore/bin/Debug/netcoreapp1.1/netcore.pdb
+/home/emersonrodrigues/Documentos/treinamento.git/netcore/obj/Debug/netcoreapp1.1/netcore.AssemblyInfo.cs
+/home/emersonrodrigues/Documentos/treinamento.git/netcore/obj/Debug/netcoreapp1.1/netcore.dll
+/home/emersonrodrigues/Documentos/treinamento.git/netcore/obj/Debug/netcoreapp1.1/netcore.pdb
