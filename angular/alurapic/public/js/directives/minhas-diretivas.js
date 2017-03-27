@@ -1,10 +1,6 @@
 angular.module('minhasDiretivas',[])
 .directive('meuPainel',function(){
 
-	/*  
-	Directive Definition Object - ddo
-	https://docs.angularjs.org/guide/directive
-	*/
 
 	var ddo = {};
 
@@ -14,17 +10,32 @@ angular.module('minhasDiretivas',[])
 	};
 	ddo.transclude = true;
 
-/*
-	ddo.template = '<div class="panel panel-default">'
-                 + '<div class="panel-heading">'
-                 + '<h3 class="panel-title">{{titulo}}</h3>'
-                 + '</div>'
-                 + '<div class="panel-body" ng-transclude>'
-                 + '</div>'
-                 + '</div>'
 
-*/
 
 ddo.templateUrl = 'js/directives/meu-painel.html';
 	return ddo;
+})
+.directive('minhaFoto',function(){
+
+	var foto = {};
+
+	foto.restric = 'AE';
+	foto.scope = {
+		titulo: '@titulo',
+		url: '@url'
+	};
+
+
+foto.templateUrl = 'js/directives/minha-foto.html';
+	return foto;
+})
+.directive('meuBotaoPerigo',function(){
+	var botao = {};
+	botao.restrict = "E";
+	botao.scope = {
+		nome: '@',
+		acao: '&'
+	};
+	botao.template = '<button ng-click="acao(foto)" class="btn btn-danger btn-block">{{nome}}</button>';
+	return botao;
 });
