@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore;
 namespace netcore.Models{
 
 public class ProdutoContext : DbContext{
-    protected override void OnConfiguring(DbContextOptionsBuilder option){
-        option.UseSqlite("filename=./superbanco");
-    }
+public ProdutoContext(DbContextOptions<ProdutoContext> options) : base(options){
 
+}
+public DbSet<Produto>Produtos{get;set;}
 
 }
 

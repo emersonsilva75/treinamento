@@ -689,23 +689,6 @@
           "lib/netstandard1.3/Microsoft.AspNetCore.Server.Kestrel.dll": {}
         }
       },
-      "Microsoft.AspNetCore.StaticFiles/1.1.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.1",
-          "Microsoft.AspNetCore.Http.Extensions": "1.1.1",
-          "Microsoft.Extensions.FileProviders.Abstractions": "1.1.0",
-          "Microsoft.Extensions.Logging.Abstractions": "1.1.1",
-          "Microsoft.Extensions.WebEncoders": "1.1.1",
-          "NETStandard.Library": "1.6.1"
-        },
-        "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.StaticFiles.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.StaticFiles.dll": {}
-        }
-      },
       "Microsoft.AspNetCore.WebUtilities/1.1.1": {
         "type": "package",
         "dependencies": {
@@ -826,20 +809,6 @@
           "lib/netstandard1.3/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Data.Sqlite/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "SQLite": "3.13.0",
-          "System.Data.Common": "4.3.0"
-        },
-        "compile": {
-          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
-        }
-      },
       "Microsoft.DiaSymReader.Native/1.4.1": {
         "type": "package",
         "build": {
@@ -953,20 +922,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Sqlite/1.1.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Data.Sqlite": "1.1.0",
-          "Microsoft.EntityFrameworkCore.Relational": "1.1.1",
-          "NETStandard.Library": "1.6.1"
-        },
-        "compile": {
-          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Sqlite.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Sqlite.dll": {}
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/1.1.1": {
@@ -1328,11 +1283,11 @@
           "lib/netstandard1.0/Microsoft.Extensions.Primitives.dll": {}
         }
       },
-      "Microsoft.Extensions.WebEncoders/1.1.1": {
+      "Microsoft.Extensions.WebEncoders/1.1.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
-          "Microsoft.Extensions.Options": "1.1.1",
+          "Microsoft.Extensions.Options": "1.1.0",
           "NETStandard.Library": "1.6.1",
           "System.Text.Encodings.Web": "4.3.0"
         },
@@ -1521,6 +1476,23 @@
           }
         }
       },
+      "MySqlConnector/0.16.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Buffers": "4.3.0",
+          "System.Data.Common": "4.3.0",
+          "System.Net.NameResolution": "4.3.0",
+          "System.Net.Security": "4.3.0",
+          "System.Threading.Tasks.Extensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/MySqlConnector.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/MySqlConnector.dll": {}
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -1601,6 +1573,52 @@
         },
         "runtime": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Pomelo.EntityFrameworkCore.MySql/1.1.1-prerelease-10029": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.1",
+          "MySqlConnector": "0.16.2",
+          "NETStandard.Library": "1.6.1",
+          "Pomelo.JsonObject": "1.1.1",
+          "System.Threading.Tasks.Extensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        }
+      },
+      "Pomelo.EntityFrameworkCore.MySql.Design/1.1.1-prerelease-10029": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational.Design": "1.1.1",
+          "Microsoft.Extensions.DependencyInjection": "1.1.0",
+          "Microsoft.Extensions.Logging.Console": "1.1.1",
+          "MySqlConnector": "0.16.2",
+          "NETStandard.Library": "1.6.1",
+          "Pomelo.EntityFrameworkCore.MySql": "1.1.1-prerelease-10029"
+        },
+        "compile": {
+          "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.Design.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.Design.dll": {}
+        }
+      },
+      "Pomelo.JsonObject/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Pomelo.JsonObject.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Pomelo.JsonObject.dll": {}
         }
       },
       "Remotion.Linq/2.1.1": {
@@ -1806,33 +1824,6 @@
           "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so": {
             "assetType": "native",
             "rid": "ubuntu.16.10-x64"
-          }
-        }
-      },
-      "SQLite/3.13.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/linux-x64/native/libsqlite3.so": {
-            "assetType": "native",
-            "rid": "linux-x64"
-          },
-          "runtimes/osx-x64/native/libsqlite3.dylib": {
-            "assetType": "native",
-            "rid": "osx-x64"
-          },
-          "runtimes/win7-x64/native/sqlite3.dll": {
-            "assetType": "native",
-            "rid": "win7-x64"
-          },
-          "runtimes/win7-x86/native/sqlite3.dll": {
-            "assetType": "native",
-            "rid": "win7-x86"
           }
         }
       },
@@ -4230,19 +4221,6 @@
         "microsoft.aspnetcore.server.kestrel.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.StaticFiles/1.1.1": {
-      "sha512": "ttgAsRSseEuCNxWBS97C5vogRGwhs9Ecqf4VVl3D+1n94BQ0SZdTx0vzQVz9YVh5d2TWjIDmvnF0wfZkr83BOA==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.staticfiles/1.1.1",
-      "files": [
-        "lib/net451/Microsoft.AspNetCore.StaticFiles.dll",
-        "lib/net451/Microsoft.AspNetCore.StaticFiles.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.StaticFiles.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.StaticFiles.xml",
-        "microsoft.aspnetcore.staticfiles.1.1.1.nupkg.sha512",
-        "microsoft.aspnetcore.staticfiles.nuspec"
-      ]
-    },
     "Microsoft.AspNetCore.WebUtilities/1.1.1": {
       "sha512": "hYvS0KpyPd4/pe+PGeRZ3tFIrp5e5ZvXhvjJrvTT6NM2MWD+ANWnpJGRePIAmqqZU91NJPGDSqyqUUPkOnIDUA==",
       "type": "package",
@@ -4377,19 +4355,6 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "Microsoft.Data.Sqlite/1.1.0": {
-      "sha512": "U2A+Z1hNTYIhh2I+SXIEY5/fW9E4Rcrdnd3UpMaiAiOdJ3vFe8KhrakSgFwbfktbeiE/TBhuLPBX7+cHagxkGA==",
-      "type": "package",
-      "path": "microsoft.data.sqlite/1.1.0",
-      "files": [
-        "lib/net451/Microsoft.Data.Sqlite.dll",
-        "lib/net451/Microsoft.Data.Sqlite.xml",
-        "lib/netstandard1.3/Microsoft.Data.Sqlite.dll",
-        "lib/netstandard1.3/Microsoft.Data.Sqlite.xml",
-        "microsoft.data.sqlite.1.1.0.nupkg.sha512",
-        "microsoft.data.sqlite.nuspec"
-      ]
-    },
     "Microsoft.DiaSymReader.Native/1.4.1": {
       "sha512": "c2FafPDrwKcoj3QDaNr0okVqvq2vAhneOytOdAZkgsdEBs/Wb+Lj9elVF+fhG0JX9WqcaSPkOiYuWev3kHcNcg==",
       "type": "package",
@@ -4467,19 +4432,6 @@
         "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.xml",
         "microsoft.entityframeworkcore.relational.design.1.1.1.nupkg.sha512",
         "microsoft.entityframeworkcore.relational.design.nuspec"
-      ]
-    },
-    "Microsoft.EntityFrameworkCore.Sqlite/1.1.1": {
-      "sha512": "NdTt1WO8SM8+cBEZVtA5/Q6CG5sK+Et0tXAKeXTA4bnE4q5cFBynY10Qep7lmHmlAekwjgXOdAcmQQsvOpIJvA==",
-      "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlite/1.1.1",
-      "files": [
-        "lib/net451/Microsoft.EntityFrameworkCore.Sqlite.dll",
-        "lib/net451/Microsoft.EntityFrameworkCore.Sqlite.xml",
-        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Sqlite.dll",
-        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Sqlite.xml",
-        "microsoft.entityframeworkcore.sqlite.1.1.1.nupkg.sha512",
-        "microsoft.entityframeworkcore.sqlite.nuspec"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/1.1.1": {
@@ -4789,14 +4741,14 @@
         "microsoft.extensions.primitives.nuspec"
       ]
     },
-    "Microsoft.Extensions.WebEncoders/1.1.1": {
-      "sha512": "r5HgDT5uvQYCeh+QzR06pB/Knc3dQqvQ7uBUXIgA/y/AXCixN0APuMOpqcSMh9/mAUr2+tVhNIqrRA4AMHToTg==",
+    "Microsoft.Extensions.WebEncoders/1.1.0": {
+      "sha512": "YnUfcLe/FYL3Mft5HPv7dSSKfZZCZwLG2GQfv3vuxdY4AbWOYLqq/3wIPCNIrgMXvzralWdkESNsb9iw5gKdpg==",
       "type": "package",
-      "path": "microsoft.extensions.webencoders/1.1.1",
+      "path": "microsoft.extensions.webencoders/1.1.0",
       "files": [
         "lib/netstandard1.0/Microsoft.Extensions.WebEncoders.dll",
         "lib/netstandard1.0/Microsoft.Extensions.WebEncoders.xml",
-        "microsoft.extensions.webencoders.1.1.1.nupkg.sha512",
+        "microsoft.extensions.webencoders.1.1.0.nupkg.sha512",
         "microsoft.extensions.webencoders.nuspec"
       ]
     },
@@ -5033,6 +4985,17 @@
         "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll"
       ]
     },
+    "MySqlConnector/0.16.2": {
+      "sha512": "yCYxcgvYgz4MkbDSiLy3xD8QP1q+ockVC0PlZFfbdH4LQAgPyo3qVhuMjp24ab9a0/a6M4B3neS2wmjztTNvMA==",
+      "type": "package",
+      "path": "mysqlconnector/0.16.2",
+      "files": [
+        "lib/net451/MySqlConnector.dll",
+        "lib/netstandard1.3/MySqlConnector.dll",
+        "mysqlconnector.0.16.2.nupkg.sha512",
+        "mysqlconnector.nuspec"
+      ]
+    },
     "NETStandard.Library/1.6.1": {
       "sha512": "DnsiHsshwoqvJz/vWI947oP+mofak9lJkUO84HTWm+bGhUVh7mXiFIa0TTwU/zlG/UNavaiazQSgXAXZKx1g+g==",
       "type": "package",
@@ -5066,6 +5029,39 @@
         "newtonsoft.json.9.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
+      ]
+    },
+    "Pomelo.EntityFrameworkCore.MySql/1.1.1-prerelease-10029": {
+      "sha512": "mLViaMz+T0/KEQUNTZfn88vG/Wtc6utIC5o7QdsVvLWMfLz5irkJE2OA30LBTNZ7i9N6AXuu9IHTuUVAwHF1IQ==",
+      "type": "package",
+      "path": "pomelo.entityframeworkcore.mysql/1.1.1-prerelease-10029",
+      "files": [
+        "lib/net451/Pomelo.EntityFrameworkCore.MySql.dll",
+        "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll",
+        "pomelo.entityframeworkcore.mysql.1.1.1-prerelease-10029.nupkg.sha512",
+        "pomelo.entityframeworkcore.mysql.nuspec"
+      ]
+    },
+    "Pomelo.EntityFrameworkCore.MySql.Design/1.1.1-prerelease-10029": {
+      "sha512": "bNkHBZl33Z7LYpUv8FcKR/upHyjxauTs1BRanuj1b41DaydpjP/HVKX/XByndNYYkcoBUd/OjhzKVVyvLOrj+g==",
+      "type": "package",
+      "path": "pomelo.entityframeworkcore.mysql.design/1.1.1-prerelease-10029",
+      "files": [
+        "lib/net451/Pomelo.EntityFrameworkCore.MySql.Design.dll",
+        "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.Design.dll",
+        "pomelo.entityframeworkcore.mysql.design.1.1.1-prerelease-10029.nupkg.sha512",
+        "pomelo.entityframeworkcore.mysql.design.nuspec"
+      ]
+    },
+    "Pomelo.JsonObject/1.1.1": {
+      "sha512": "erkYG/OW1LloSwDFGeS9MvVjy1FLmaV3k8GK/GMR8D3sSDEylZogoLdLiaOFc92+zTen92rG6XGiioNacSlg0A==",
+      "type": "package",
+      "path": "pomelo.jsonobject/1.1.1",
+      "files": [
+        "lib/net451/Pomelo.JsonObject.dll",
+        "lib/netstandard1.3/Pomelo.JsonObject.dll",
+        "pomelo.jsonobject.1.1.1.nupkg.sha512",
+        "pomelo.jsonobject.nuspec"
       ]
     },
     "Remotion.Linq/2.1.1": {
@@ -5289,25 +5285,6 @@
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
-      ]
-    },
-    "SQLite/3.13.0": {
-      "sha512": "VXno+/3GB8AZqHzuk4Vkt4b25JOvMvsff35oc9B2/HECJRx+MBHvYwHHIUOO98L9s0lig52H/GbvQKPcpXadYg==",
-      "type": "package",
-      "path": "sqlite/3.13.0",
-      "files": [
-        "build/net45/SQLite.props",
-        "lib/netstandard1.0/_._",
-        "runtimes/linux-x64/native/libsqlite3.so",
-        "runtimes/osx-x64/native/libsqlite3.dylib",
-        "runtimes/win10-arm/nativeassets/uap10.0/sqlite3.dll",
-        "runtimes/win10-x64/nativeassets/uap10.0/sqlite3.dll",
-        "runtimes/win10-x86/nativeassets/uap10.0/sqlite3.dll",
-        "runtimes/win7-x64/native/sqlite3.dll",
-        "runtimes/win7-x86/native/sqlite3.dll",
-        "sqlite-version.txt",
-        "sqlite.3.13.0.nupkg.sha512",
-        "sqlite.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -9939,10 +9916,11 @@
     ".NETCoreApp,Version=v1.1": [
       "Microsoft.AspNetCore >= 1.1.1",
       "Microsoft.AspNetCore.Mvc >= 1.1.1",
-      "Microsoft.AspNetCore.StaticFiles >= 1.1.1",
+      "Microsoft.EntityFrameworkCore >= 1.1.1",
       "Microsoft.EntityFrameworkCore.Design >= 1.1.1",
-      "Microsoft.EntityFrameworkCore.Sqlite >= 1.1.1",
-      "Microsoft.NETCore.App >= 1.1.1"
+      "Microsoft.NETCore.App >= 1.1.1",
+      "Pomelo.EntityFrameworkCore.MySql >= 1.1.1-*",
+      "Pomelo.EntityFrameworkCore.MySql.Design >= 1.1.1-*"
     ]
   },
   "packageFolders": {
@@ -9983,17 +9961,22 @@
             "target": "Package",
             "version": "1.1.1"
           },
-          "Microsoft.AspNetCore.StaticFiles": {
-            "target": "Package",
-            "version": "1.1.1"
-          },
-          "Microsoft.EntityFrameworkCore.Sqlite": {
+          "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "1.1.1"
           },
           "Microsoft.EntityFrameworkCore.Design": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "1.1.1"
+          },
+          "Pomelo.EntityFrameworkCore.MySql": {
+            "target": "Package",
+            "version": "1.1.1-*"
+          },
+          "Pomelo.EntityFrameworkCore.MySql.Design": {
+            "target": "Package",
+            "version": "1.1.1-*"
           }
         }
       }

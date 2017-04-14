@@ -10,16 +10,27 @@ public class HomeController : Controller
 {
     [HttpGetAttribute]
     public IEnumerable<Produto> Index(){
-    var lista = new List<Produto>
+    var lista = new List<Produto>();
     }
-
+/*
 [HttpPostAttribute]
-public int Insert([FromBodyAttribute] Produto produto){
+public IActionResult Insert([FromBodyAttribute] Produto produto){
 using(var db = new  ProdutoContext()){
     db.Produtos.Add(produto);
     db.SaveChanges();
 }
+
 }
+*/
+   [HttpPostAttribute]
+        public IActionResult Insert([FromBodyAttribute] Produto produto){
+            using(var db = new ProdutoContext())
+            {
+                db.Produtos.Add(produto);
+                db.SaveChanges();
+            }
+            return Ok();
+        }
 
 }
 }
