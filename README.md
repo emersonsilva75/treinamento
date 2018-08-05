@@ -1,6 +1,6 @@
 Repositório de treinamentos pessoais de cursos lideres de mercado como imaster, treinaweb, alura
 
-#Android
+# Android
 
 Calculadora feita baseada em treinamento imasters
 
@@ -8,11 +8,11 @@ Calculadora feita baseada em treinamento imasters
 
 Treinamento da plataforma Alura
 
-#dotnet core
+# Dotnet core
 
 Workshop feito no Superlogica Labs gerando um game básico
 
-#Javascript
+# Javascript
 
 Estudo de ES6 feito na Alura
 
