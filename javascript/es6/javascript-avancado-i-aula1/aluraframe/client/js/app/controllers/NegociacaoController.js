@@ -21,6 +21,24 @@ class NegociacaoController {
             this._negociacoesview.update(model);     
         });
         */
+
+        let self = this;
+
+       this._listaNegociacoes  = new Proxy(new ListaNegociacoes(),{
+                get : function(target,prop,receiver){
+        
+                    if(['adiciona','esvazia'].includes(prop) && typeof(target[prop]) == typeof(Function)){
+                        return function(){
+                            console.log(`interceptando ${prop}`);
+                            Reflect.apply(target[prop],target,arguments);
+                            self._negociacoesview.update(target);
+                        }                    
+                    } 
+                    return Reflect.get(target,prop,receiver);                   
+                }
+            });
+ //           lista.adiciona(new Negociacao(new Date,1,100)); 
+
         this._negociacoesview = new NegociacoesView($('#negociacoesview'));
         this._negociacoesview.update(this._listaNegociacoes);
         this._mensagem = new Mensagem();
