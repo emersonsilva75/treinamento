@@ -21,29 +21,30 @@ class NegociacaoController {
             this._negociacoesview.update(model);     
         });
         */
+     
+        this._listaNegociacoes  = new Bind(
+            new ListaNegociacoes(),
+            new NegociacoesView($('#negociacoesview')),
+            'adiciona','esvazia');
 
-        let self = this;
-
-       this._listaNegociacoes  = new Proxy(new ListaNegociacoes(),{
-                get : function(target,prop,receiver){
-        
-                    if(['adiciona','esvazia'].includes(prop) && typeof(target[prop]) == typeof(Function)){
-                        return function(){
-                            console.log(`interceptando ${prop}`);
-                            Reflect.apply(target[prop],target,arguments);
-                            self._negociacoesview.update(target);
-                        }                    
-                    } 
-                    return Reflect.get(target,prop,receiver);                   
-                }
-            });
+/*this._listaNegociacoes  = ProxyFactory.create(
+           new ListaNegociacoes(),
+           ['adiciona','esvazia'],
+           model => this._negociacoesview.update(model));
  //           lista.adiciona(new Negociacao(new Date,1,100)); 
-
-        this._negociacoesview = new NegociacoesView($('#negociacoesview'));
+   this._negociacoesview = new NegociacoesView($('#negociacoesview'));
+*/
+        
+        this._mensagem = new Bind(
+            new MensagemView(),
+            new MensagemView($('#mensagemView')),
+            'texto');
+        /*
         this._negociacoesview.update(this._listaNegociacoes);
-        this._mensagem = new Mensagem();
-        this._mensagemView = new MensagemView($('#mensagemView'));
+        this._mensagem = ProxyFactory.create(new Mensagem(),['texto'],model=>
+            this._mensagemView.update(model));
         this._mensagemView.update(this._mensagem);
+        */
     }
 
     adiciona(event) {
@@ -67,7 +68,7 @@ class NegociacaoController {
     
     this._listaNegociacoes.adiciona(this._criaNegociacao());
     this._mensagem.texto = 'Negociacao adicionada com sucesso';
-    this._mensagemView.update(this._mensagem);
+   // this._mensagemView.update(this._mensagem);
     this._limpaFormulario();
     
 /*
@@ -82,10 +83,31 @@ console.log(this.inputValor.value);
 
     }
 
+    importaNegociacoes(){
+     let service = new NegociacaoService();
+     let promise = service.obterNegociacaoesDaSemana();
+     promise.then(negociacoes => {
+         negociacoes.forEach(negociacao => this._listaNegociacoes.adiciona(negociacao));
+         this._mensagem.texto = "Negociações da semana obtida com sucesso";
+     })       
+       .catch(erro => this._mensagem.texto = erro);
+
+     /*
+     service.obterNegociacaoesDaSemana((erro,negociacoes)=>{
+        if(err){
+            this._mensagem.texto = erro;
+            return;
+        }
+        negociacoes.forEach(negociacao => this._listaNegociacoes.adiciona(negociacao));
+        this._mensagem.texto = "Negociações importadas com sucesso";
+     });
+     */
+    }
+
     apaga(){
         this._listaNegociacoes.esvazia();
         this._mensagem.texto = 'Negociacoes apagadas com sucesso !';
-        this._mensagemView.update(this._mensagem);
+     //   this._mensagemView.update(this._mensagem);
     }
 
     _criaNegociacao(){
