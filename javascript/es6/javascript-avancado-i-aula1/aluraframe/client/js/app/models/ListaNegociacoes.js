@@ -5,6 +5,14 @@ class ListaNegociacoes{
         //this._contexto = contexto;
     }
 
+    ordena(criterio) {
+        this._negociacoes.sort(criterio);        
+    }
+
+    inverteOrdem() {
+        this._negociacoes.reverse();
+    }
+
     adiciona(negociacao){
        /*
        Gambiarra
