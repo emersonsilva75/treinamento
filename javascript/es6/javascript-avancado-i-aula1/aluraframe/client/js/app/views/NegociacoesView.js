@@ -1,6 +1,5 @@
 class NegociacoesView extends View{
-    constructor(elemento) {
-        
+    constructor(elemento) {   
         super(elemento);
      }
   
