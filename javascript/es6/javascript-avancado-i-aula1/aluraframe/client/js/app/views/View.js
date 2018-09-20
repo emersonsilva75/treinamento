@@ -1,7 +1,6 @@
 class View{
     constructor(elemento){
-        console.log(elemento);
-        this._elemento = elemento;
+      this._elemento = elemento;
     }
 
     template(model){
