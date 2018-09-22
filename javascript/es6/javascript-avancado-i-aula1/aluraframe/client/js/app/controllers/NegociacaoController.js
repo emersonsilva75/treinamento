@@ -10,19 +10,18 @@ class NegociacaoController {
         this._inputQuantidade = $('#quantidade');
         this._inputValor = $('#valor');
 
-
-
         this._listaNegociacoes = new Bind(
             new ListaNegociacoes(),
             new NegociacoesView($('#negociacoesView')),
             'adiciona', 'esvazia', 'ordena', 'inverteOrdem');
 
-
         this._mensagem = new Bind(
             new MensagemView(),
             new MensagemView($('#mensagemView')),
             'texto');
+    }
 
+    _init() {
         ConnectionFactory
             .getConnection()
             .then(connection => {
@@ -39,18 +38,6 @@ class NegociacaoController {
                 this._mensagem.texto = error;
 
             });
-
-        /*
-        ConnectionFactory
-        .getConnection()
-        .then(connection => new NegociacaoDao(connection))
-        .then(dao => dao.listaTodos())
-        .then(negociacoes => 
-                    negociacoes.forEach(negociacao => 
-                        this._listaNegociacoes.adiciona(negociacao)));
-        }
-        */
-
     }
 
     adiciona(event) {
@@ -89,7 +76,9 @@ class NegociacaoController {
         service
             .obterNegociacaoesDaSemana()
             .then(negociacoes =>
-                negociacoes.filter(negociacao => this._listaNegociacoes.negociacoes.indexof(negociacao) == -1)
+                negociacoes.filter(negociacao =>
+                    !this._listaNegociacoes.negociacoes.some(negociacaoExistente =>
+                        JSON.stringify(negociacao) == JSON.stringify(negociacaoExistente)))
             )
             .then(negociacoes => negociacoes.forEach(negociacao => {
                 this._listaNegociacoes.adiciona(negociacao);
