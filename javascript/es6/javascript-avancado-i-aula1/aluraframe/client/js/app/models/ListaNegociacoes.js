@@ -1,40 +1,62 @@
-class ListaNegociacoes{
-    constructor(/*contexto,armadilha*/){
+"use strict";
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ListaNegociacoes = function () {
+    function ListaNegociacoes() /*contexto,armadilha*/{
+        _classCallCheck(this, ListaNegociacoes);
+
         this._negociacoes = [];
-      //  this._armadilha = armadilha;
+        //  this._armadilha = armadilha;
         //this._contexto = contexto;
     }
 
-    ordena(criterio) {
-        this._negociacoes.sort(criterio);        
-    }
+    _createClass(ListaNegociacoes, [{
+        key: "ordena",
+        value: function ordena(criterio) {
+            this._negociacoes.sort(criterio);
+        }
+    }, {
+        key: "inverteOrdem",
+        value: function inverteOrdem() {
+            this._negociacoes.reverse();
+        }
+    }, {
+        key: "adiciona",
+        value: function adiciona(negociacao) {
+            /*
+            Gambiarra
+            this._negociacoes = [].concat(this._negociacoes,negociacao);
+            */
 
-    inverteOrdem() {
-        this._negociacoes.reverse();
-    }
+            this._negociacoes.push(negociacao);
 
-    adiciona(negociacao){
-       /*
-       Gambiarra
-       this._negociacoes = [].concat(this._negociacoes,negociacao);
-       */
+            // this._armadilha(this);
+            // Reflect.apply(this._armadilha,this._contexto,[this]);
+        }
+    }, {
+        key: "esvazia",
+        value: function esvazia() {
+            this._negociacoes = [];
+            //  this._armadilha(this);
+            // Reflect.apply(this._armadilha,this._contexto,[this]);
+        }
+    }, {
+        key: "negociacoes",
+        get: function get() {
+            return [].concat(this._negociacoes);
+        }
+    }, {
+        key: "volumeTotal",
+        get: function get() {
+            return this._negociacoes.reduce(function (total, n) {
+                return total + n.volume;
+            }, 0.0);
+        }
+    }]);
 
-        this._negociacoes.push(negociacao);
-      
-        // this._armadilha(this);
-       // Reflect.apply(this._armadilha,this._contexto,[this]);
-    }
-    get negociacoes(){
-        return [].concat(this._negociacoes);
-    }
-    esvazia(){
-        this._negociacoes = [];
-      //  this._armadilha(this);
-       // Reflect.apply(this._armadilha,this._contexto,[this]);
-    }
-
-    get volumeTotal() {
-        return this._negociacoes.reduce((total, n) => total + n.volume, 0.0);
-     }
-    
-}
+    return ListaNegociacoes;
+}();
+//# sourceMappingURL=ListaNegociacoes.js.map
