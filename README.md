@@ -1,25 +1,57 @@
-Repositório de treinamentos pessoais de cursos lideres de mercado como imaster, treinaweb, alura
+# 🎓 Personal Training Repository
 
-# Android
+This repository contains personal training projects from leading market courses such as iMasters, TreinaWeb, and Alura.
 
-Calculadora feita baseada em treinamento imasters
+## 📱 Android
 
-# Angular
+- **Calculator App**: Based on iMasters training
 
-Treinamento da plataforma Alura
+## 🅰️ Angular
 
-# Dotnet core
+- **Training Project**: Developed during Alura platform course
 
-Workshop feito no Superlogica Labs gerando um game básico
+## 💻 .NET Core
 
-# Javascript
+- **Basic Game**: Workshop project developed at Superlogica Labs
 
-Estudo de ES6 feito na Alura
+## 🟨 JavaScript
 
-# Python
+- **ES6 Studies**: Course completed at Alura
 
-Feliz.py is an application that calculate the happy number .  This challenge was proposed on Dojo at Industria Fox IT 
+## 🐍 Python
 
-# Cursor AI
+- **Happy Numbers**: Application that calculates happy numbers. This challenge was proposed during a Dojo session at Indústria Fox IT
 
-Uma aplicação html, css e javascript para gerar um todo list com localstorage usando o Cursor. O processo demorou 10 minutos.
+## 🤖 Cursor AI
+
+- **Todo List**: A simple HTML, CSS, and JavaScript application using localStorage. Developed in 10 minutes using Cursor AI.
+
+---
+
+# 🎓 Repositório de Treinamentos Pessoais
+
+Este repositório contém projetos de treinamento pessoal de cursos líderes de mercado como iMasters, TreinaWeb e Alura.
+
+## 📱 Android
+
+- **Calculadora**: Desenvolvida baseada no treinamento iMasters
+
+## 🅰️ Angular
+
+- **Projeto de Treinamento**: Desenvolvido durante curso na plataforma Alura
+
+## 💻 .NET Core
+
+- **Jogo Básico**: Projeto de workshop desenvolvido no Superlogica Labs
+
+## 🟨 JavaScript
+
+- **Estudos de ES6**: Curso realizado na Alura
+
+## 🐍 Python
+
+- **Números Felizes**: Aplicação que calcula números felizes. Este desafio foi proposto durante um Dojo na Indústria Fox IT
+
+## 🤖 Cursor AI
+
+- **Lista de Tarefas**: Uma aplicação simples em HTML, CSS e JavaScript utilizando localStorage. Desenvolvida em 10 minutos usando o Cursor AI.
