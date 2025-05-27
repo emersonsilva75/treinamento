@@ -19,3 +19,7 @@ Estudo de ES6 feito na Alura
 # Python
 
 Feliz.py is an application that calculate the happy number .  This challenge was proposed on Dojo at Industria Fox IT 
+
+# Cursor AI
+
+Uma aplicação html, css e javascript para gerar um todo list com localstorage usando o Cursor. O processo demorou 10 minutos.
